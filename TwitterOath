@@ -1,0 +1,17 @@
+library(twitteR)
+
+#Accessing Twitter data through Twitter API using (twitteR). It requires Oauth Authorization to download the data from a users timeline. Hence run this code to get the authorization
+
+api_key <- "4ccLTAcSgNdKYlofHRoLNva5m"
+
+api_secret <- "CZRbc0dAMs2tBo72kMIjeTsPpg7A2rXGcwRKOwb5GCgHRrwDrO"
+
+access_token <- "1140083238-SP4V0uLB24vkHfOoy66zZWfjlkyscF0kX8Pi7rT"
+  
+access_token_secret <- "jKlLFNe5dkGUlKTCSV4Lb1iFSEjhbVbrcC3EXzPqtsSJP"
+
+setup_twitter_oauth(api_key,api_secret,access_token,access_token_secret)
+
+# For example search the twitter for Ice bucket challenge related topics
+searchTwitter("IceBucketChallenge")
+
