@@ -17,3 +17,15 @@ library(tm)
 
 corpus= Corpus(VectorSource(dataFrame$text))
 
+corpus=tm_map(corpus, tolower,lazy=TRUE)
+
+corpus=tm_map(corpus, removePunctuation, lazy= TRUE)
+
+corpus=tm_map(corpus, removeNumbers,lazy=TRUE)
+
+removeURL=function(x) gsub("http[[:alnum:]]*","",x)
+
+corpus=tm_map(corpus, removeURL,lazy=TRUE)
+
+corpus=tm_map(corpus, stopwords("english"),lazy=TRUE)
+
